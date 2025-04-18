@@ -112,6 +112,44 @@ button {
   fill: #f4f4fd;
 }
 
+.menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.menu-close-btn:hover .close-icon,
+.menu-close-btn:focus .close-icon {
+  fill: #ffffff;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -292,28 +330,6 @@ button {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-.mobile-menu-close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-
-  background-color: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-nav {
@@ -953,44 +969,6 @@ button {
 
 .backdrop:not(.is-open) .modal {
   transform: translate(-50%, -50%) scale(1.5);
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-
-  background-color: #e7e9fc;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.close-icon {
-  fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-  background-color: #404bbf;
-  border: none;
-}
-
-.modal-close-btn:hover .close-icon,
-.modal-close-btn:focus .close-icon {
-  fill: #ffffff;
 }
 
 .modal-title {
